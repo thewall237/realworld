@@ -9,7 +9,7 @@ services:
       context: .
       dockerfile: ./docker/php/Dockerfile
     volumes:
-      - ./app/:/var/www/html
+      - ./dev/:/var/www/html
     environment:
       - DB_CONNECTION=mysql
       - DB_HOST=db
@@ -27,7 +27,7 @@ services:
     depends_on:
       - app
     volumes:
-      - ./app/:/var/www/html
+      - ./dev/:/var/www/html
     environment:
       CLIENT_MAX_BODY_SIZE: 10M
 
